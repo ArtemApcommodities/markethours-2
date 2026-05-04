@@ -3,90 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Primary Tags -->
     <title>Stock Market Hours - Live Global Countdown & Trading Clock</title>
-    <meta name="description" content="Is the Stock Market Open? Track live world stock exchange trading hours with real-time countdowns and holiday logic. View 30+ global markets in your local timezone.">
-    <meta name="keywords" content="stock market hours, nyse countdown, lse trading hours, is the market open, global exchange clock">
-
-    <!-- JSON-LD Schema for Google Rich Snippets -->
+    <meta name="description" content="Is the Stock Market Open? World Exchange Trading Hours & Countdown for 30 major global markets with live updates and countdown timers.">
+    <link rel="canonical" href="https://your-domain.github.io/">
+    
+    <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Global Market Clock",
-      "description": "Real-time trading hours and countdowns for 30+ global stock exchanges with holiday awareness.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+      "@type": "WebPage",
+      "name": "Stock Market Hours - Live Global Countdown & Trading Clock",
+      "description": "Real-time status and countdown for 30 major global stock exchanges with live local time updates.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Global Market Tracker"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-
-    <header>
-        <div class="header-content">
-            <h1>Stock Market Hours</h1>
-            <p class="subtitle">Live Global Countdown & Trading Status</p>
+    <!-- Legal Pages Modal Overlay -->
+    <div id="legal-modal" class="modal-overlay hidden">
+        <div class="modal-content" id="legal-modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <iframe src="" id="legal-iframe" frameborder="0"></iframe>
         </div>
+    </div>
 
-        <!-- MID-SIZE AD ABOVE THE FOLD -->
-        <div class="ad-container ad-mid-top">
-            <span class="ad-label">ADVERTISEMENT</span>
-            <!-- Replace this div with your AdSense <ins> tag -->
-            <div id="ads-top"></div>
-        </div>
+    <!-- Header -->
+    <header class="site-header">
+        <h1>Global Stock Market Hours</h1>
+        <p class="subtitle">Live Trading Status • Real-time Countdowns • 30 Major Exchanges Worldwide</p>
+        <nav class="legal-nav" aria-label="Legal Links">
+            <a href="#" onclick="openModal('privacy')" title="Privacy Policy">📋 Privacy</a>
+            <a href="#" onclick="openModal('terms')" title="Terms of Service">⚖️ Terms</a>
+        </nav>
     </header>
 
-    <main>
-        <!-- The JS will inject the 30 exchange cards here -->
-        <div id="market-grid" class="grid-container">
-            <div class="loading">Loading global market data...</div>
-        </div>
+    <!-- Ad Slot: Mid-size above fold -->
+    <div id="ad-top" class="ad-slot ad-midsize"></div>
+
+    <main class="market-container">
+        <section id="exchange-grid" class="grid-container">
+            <!-- Exchange cards dynamically populated here -->
+        </section>
+        
+        <!-- Ad Slot: Display ad at bottom -->
+        <div id="ad-bottom" class="ad-slot ad-display"></div>
     </main>
 
-    <footer>
-        <!-- LARGE DISPLAY AD -->
-        <div class="ad-container ad-large-bottom">
-            <span class="ad-label">ADVERTISEMENT</span>
-            <div id="ads-bottom-main"></div>
-        </div>
-
-        <!-- TWO HALF-SIZE ADS BELOW THE LARGE ONE -->
-        <div class="ad-row">
-            <div class="ad-container ad-half">
-                <span class="ad-label">ADVERTISEMENT</span>
-                <div id="ads-bottom-left"></div>
-            </div>
-            <div class="ad-container ad-half">
-                <span class="ad-label">ADVERTISEMENT</span>
-                <div id="ads-bottom-right"></div>
-            </div>
-        </div>
-
-        <hr class="footer-divider">
-
+    <!-- Footer with Contact Link -->
+    <footer class="site-footer">
         <div class="footer-content">
-            <div class="legal-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="mailto:artem.apcommodities@gmail.com">Contact Us</a>
-            </div>
-            <p class="disclaimer">
-                Market data is synchronized with IANA timezones. Clocks update every second. 
-                Always verify with official exchange notices before trading.
-            </p>
-            <p class="copyright">&copy; 2026 Market Hours Tracker. All rights reserved.</p>
+            <p>&copy; 2024 Global Market Tracker. All exchange information is for reference only.</p>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="/legal/contact.html" title="Contact Us">📧 Contact Us</a>
+                <span>artem.apcommodities@gmail.com</span>
+            </nav>
         </div>
     </footer>
 
-    <!-- Main Logic Script -->
-    <script src="script.js"></script>
+    <!-- Legal Pages Script -->
+    <script src="./js/legal-pages.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
