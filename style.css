@@ -1,0 +1,76 @@
+:root {
+    --open: #2ecc71;
+    --closed: #e74c3c;
+    --amber: #f1c40f;
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --text: #ffffff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exchange-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    border-left: 8px solid var(--closed);
+    cursor: pointer;
+}
+
+.exchange-card:hover {
+    background: #2a2a2a;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.exchange-card:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 4px;
+}
+
+/* Status Colors */
+.card-open { border-color: var(--open); }
+.card-closed { border-color: var(--closed); }
+.card-amber { border-color: var(--amber); }
+
+.status-badge {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.badge-open { background: var(--open); color: #000; }
+.badge-closed { background: var(--closed); color: #fff; }
+.badge-amber { background: var(--amber); color: #000; }
+
+.countdown { font-family: monospace; font-size: 1.1rem; color: #aaa; }
+
+/* Ads */
+.ad-container { background: #1a1a1a; margin: 20px auto; text-align: center; border: 1px dashed #444; }
+.ad-label { font-size: 10px; color: #666; margin: 5px; }
+.ad-mid-top { width: 100%; max-width: 728px; height: 90px; }
+.ad-large-bottom { width: 100%; max-width: 970px; height: 250px; }
+.ad-row { display: flex; gap: 10px; max-width: 970px; margin: 0 auto; }
+.ad-half { flex: 1; height: 250px; }
