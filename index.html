@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Market Hours - Live Global Countdown & Trading Clock</title>
-    <meta name="description" content="Is the Stock Market Open? Track live world stock exchange trading hours with real-time countdowns and holiday logic in your local timezone.">
     
-    <!-- JSON-LD Schema for Rich Snippets -->
+    <!-- SEO Primary Tags -->
+    <title>Stock Market Hours - Live Global Countdown & Trading Clock</title>
+    <meta name="description" content="Is the Stock Market Open? Track live world stock exchange trading hours with real-time countdowns and holiday logic. View 30+ global markets in your local timezone.">
+    <meta name="keywords" content="stock market hours, nyse countdown, lse trading hours, is the market open, global exchange clock">
+
+    <!-- JSON-LD Schema for Google Rich Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Global Market Clock",
-      "description": "Real-time trading hours and countdowns for 30+ global stock exchanges.",
+      "description": "Real-time trading hours and countdowns for 30+ global stock exchanges with holiday awareness.",
       "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All"
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
 
@@ -23,35 +31,62 @@
 <body>
 
     <header>
-        <h1>Global Market Hours</h1>
-        <!-- Mid-size Ad Above the Fold -->
+        <div class="header-content">
+            <h1>Stock Market Hours</h1>
+            <p class="subtitle">Live Global Countdown & Trading Status</p>
+        </div>
+
+        <!-- MID-SIZE AD ABOVE THE FOLD -->
         <div class="ad-container ad-mid-top">
-            <p class="ad-label">Advertisement</p>
-            <div id="adsense-top-placeholder">
-                <!-- AdSense Code Here -->
-            </div>
+            <span class="ad-label">ADVERTISEMENT</span>
+            <!-- Replace this div with your AdSense <ins> tag -->
+            <div id="ads-top"></div>
         </div>
     </header>
 
-    <main id="market-grid" class="grid-container">
-        <!-- Cards injected by JavaScript -->
+    <main>
+        <!-- The JS will inject the 30 exchange cards here -->
+        <div id="market-grid" class="grid-container">
+            <div class="loading">Loading global market data...</div>
+        </div>
     </main>
 
     <footer>
-        <!-- Large Display Ad -->
+        <!-- LARGE DISPLAY AD -->
         <div class="ad-container ad-large-bottom">
-            <p class="ad-label">Advertisement</p>
-            <div id="adsense-bottom-main"></div>
+            <span class="ad-label">ADVERTISEMENT</span>
+            <div id="ads-bottom-main"></div>
         </div>
-        <!-- Two Half-Size Ads -->
+
+        <!-- TWO HALF-SIZE ADS BELOW THE LARGE ONE -->
         <div class="ad-row">
-            <div class="ad-container ad-half"><div id="adsense-bottom-left"></div></div>
-            <div class="ad-container ad-half"><div id="adsense-bottom-right"></div></div>
+            <div class="ad-container ad-half">
+                <span class="ad-label">ADVERTISEMENT</span>
+                <div id="ads-bottom-left"></div>
+            </div>
+            <div class="ad-container ad-half">
+                <span class="ad-label">ADVERTISEMENT</span>
+                <div id="ads-bottom-right"></div>
+            </div>
         </div>
-        
-        <p>&copy; 2026 Market Hours Tracker. All Exchange Data is local time.</p>
+
+        <hr class="footer-divider">
+
+        <div class="footer-content">
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:artem.apcommodities@gmail.com">Contact Us</a>
+            </div>
+            <p class="disclaimer">
+                Market data is synchronized with IANA timezones. Clocks update every second. 
+                Always verify with official exchange notices before trading.
+            </p>
+            <p class="copyright">&copy; 2026 Market Hours Tracker. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Main Logic Script -->
     <script src="script.js"></script>
 </body>
 </html>
